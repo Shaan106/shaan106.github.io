@@ -2922,6 +2922,18 @@ input, select, textarea {
 
 		}
 
+/* project individual page elements */
+
+.project_header {
+	width: 100%;
+	background: #17141d;
+	border-radius: 16px;
+	padding: 1em 1.5em;
+	justify-content: space-between;
+	margin: 30px;
+}
+
+
 /* Project tiles  */
 
 .card {
