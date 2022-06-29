@@ -37,7 +37,7 @@ section, summary, time, mark, audio, video {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
 	padding-top: 1.5em;
-	
+
 }
 
 
@@ -3043,7 +3043,7 @@ time {
 
 				#header .logo .symbol img {
 					display: block;
-					width: 4em;
+					width: 6em;
 					height: 4em;
 				}
 
