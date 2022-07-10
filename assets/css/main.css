@@ -3017,11 +3017,16 @@ time {
 	background-image: url("../../images/Lorenz_attractor_test.png");
 	background-position: center;
 	background-size: cover;
-	backdrop-filter: brightness(30%);
 }
 
 .card_background_01_melanomaScan {
 	background-image: url("../../images/melanoma_scan_card_img.png");
+	background-position: center;
+	background-size: cover;
+}
+
+.card_background_01_newspal {
+	background-image: url("../../images/newspal_card_img.png");
 	background-position: center;
 	background-size: cover;
 }
