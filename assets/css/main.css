@@ -3031,6 +3031,12 @@ time {
 	background-size: cover;
 }
 
+.card_background_01_website {
+	background-image: url("../../images/website_card_img.png");
+	background-position: center;
+	background-size: cover;
+}
+
 /* Header */
 
 	#header {
