@@ -2936,6 +2936,19 @@ input, select, textarea {
 
 /* Project tiles  */
 
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.card_column {
+  float: left;
+	width: 50%;
+  padding: 0.5em;
+}
+
+/* Clear floats after image containers */
+.card_row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 .card {
 
   width: 100%;
@@ -2943,16 +2956,16 @@ input, select, textarea {
   height: 20em;
   background: #17141d;
   border-radius: 16px;
-  padding: 1rem 1.5rem;
-  box-shadow: -1rem 0 3rem #000;
-  box-sizing: border-box;
+  padding: 1rem 1.5em;
+  /*box-shadow: -1rem 0 3rem #000;
+  box-sizing: border-box;*/
   /*display: flex;*/
   /*flex-direction: column;*/
 	/*background-image: url("../../images/Lorenz_attractor_test.png");*/
   justify-content: space-between;
   cursor: pointer;
-  transition: 0.2s;
-  margin: 30px;
+  /*transition: 0.2s;*/
+  margin: 1em;
 }
 
 .main-link:hover {
@@ -3039,6 +3052,24 @@ time {
 
 .card_background_01_vitaSanare {
 	background-image: url("../../images/vita_sanare_card_img.png");
+	background-position: center;
+	background-size: cover;
+}
+
+.card_background_01_gravity {
+	background-image: url("../../images/gravity_card_img.png");
+	background-position: center;
+	background-size: cover;
+}
+
+.card_background_01_qmResearch {
+	background-image: url("../../images/qm_research_card_img.png");
+	background-position: center;
+	background-size: cover;
+}
+
+.card_background_01_airfilterResearch {
+	background-image: url("../../images/airfilter_research_card_img.png");
 	background-position: center;
 	background-size: cover;
 }
