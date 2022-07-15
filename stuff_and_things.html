@@ -1,16 +1,16 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Blog</title>
+		<title>Vaguely Interesting</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		body {
+					background-image: url("images/solid_black_background.png");
+			 }
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -32,15 +32,84 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Stuff and Things Page</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1>Vaguely Interesting</h1>
+							<p>Riveting content. More of a personal journal I'll try to add to whenever I remember. Started 15 July 2022.</p>
+
+							<hr>
+
+							<div id='toc'></div>
+
+							<hr />
+
+							<article>
+
+								<h4 id='article-4' slot='article-4'>Teleportation?</h4>
+								<p>If you make a digital copy of a person, accurate to the atomic scale
+								and then "print" a copy of them on a planet far away, destroying their current body,
+								are you teleporting them? Do they count as the same person?</p>
+
+								<h4 id='article-3' slot='article-3'>The Perfect Slap</h4>
+								<p>Ever wondered what the scientific "best slap" is? Well I did. I decided to use my truly very professional expertise in biology and physics to find an answer.
+									<br>
+									<a href="stuff_and_things_content/the_perfect_slap.html"><u> And here's the result</u></a>.
+									<br>
+									But here's a summary as my research did go a bit over the top -
+								</p>
+								<img src="stuff_and_things_content/slap_conclusion.png" alt="conclusion" width="50%">
+								<p>&nbsp</p>
+
+								<h4 id='article-2' slot='article-2'>Parfait</h4>
+								<p>Velociraptor was a mid-sized dromaeosaurid, with adults measuring up to 2.07 m (6.8 ft) long, 0.5 m (1.6 ft) high at the hip, and weighing up to 15 kg (33 lb). The skull, which grew up to 25 cm (10 in) long, was uniquely up-curved, concave on the upper surface and convex on the lower. The jaws were lined with 26–28 widely spaced teeth on each side, each more strongly serrated on the back edge than the front.</p>
+
+								<h4 id='article-1' slot='article-1'>huh</h4>
+								<p>huh
+								</p>
+
+
+							</article>
+
 						</div>
 					</div>
 
 			</div>
+
+			<template> <!-- UPDATE LINKS TO NEW BLOG POSTS HERE -->
+
+				<h2>Table of contents.</h2>
+				<ul>
+					<li><a href='#article-4'><slot name='article-4'></slot></a></li>
+					<li><a href='#article-3'><slot name='article-3'></slot></a></li>
+					<li><a href='#article-2'><slot name='article-2'></slot></a></li>
+					<li><a href='#article-1'><slot name='article-1'></slot></a></li>
+				</ul>
+
+				<style>
+
+					h2,
+					a,
+					p,
+					ul,
+					span {
+						color: #ffffff;
+					}
+
+					a {
+						text-decoration: none;
+						transition: 0.2s;
+					}
+					a:hover, a:focus {
+						color: #ff8a00;
+						outline: none;
+					}
+
+					ul
+					{
+						line-height:30%
+					}
+
+				</style>
+
+		</template>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -48,6 +117,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/table_of_contents.js"></script>
+
+			</script>
 
 	</body>
 </html>
