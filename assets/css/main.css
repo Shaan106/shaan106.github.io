@@ -30,6 +30,19 @@ section, summary, time, mark, audio, video {
 	border-radius: 10%;
 }
 
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered_text_img {
+  position: absolute;
+	bottom: -0.5em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .navbar {
 	overflow: hidden;
   background-color: #000000;
