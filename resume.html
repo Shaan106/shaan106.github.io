@@ -1,54 +1,50 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaan's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Include the custom font if needed */
+    @import url('https://fonts.googleapis.com/css2?family=YourCustomFont:wght@400;700&display=swap');
 
-<html>
-	<head>
-		<title>Resume (Updated December 7th 2023)</title> <!-- CHANGE HERE -->
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-		<style>
-		body {
-					background-image: url("../images/solid_black_background.png");
-			 }
-		</style>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+    body {
+      /* Update this if you have a custom font */
+      font-family: "Times New Roman", Times, serif;
+    }
+  </style>
+</head>
+<body class="font-serif antialiased text-gray-900 bg-white">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+  <!-- Header -->
 
-							<!-- Logo -->
-							<a href="../index.html" class="logo">
-								<span class="symbol"><img src="../images/logo2.gif" alt="" /></span><span class="title">Shaan Yadav</span>
-							</a>
+  <header class="fixed top-0 w-full z-50 bg-white shadow-md">
+    <nav class="container mx-auto px-4 py-4 flex justify-between">
+        <div>
+            <a href="index.html" class="text-3xl font-semibold">Shaan Yadav</a>
+          </div>
+          <div>
+            <a href="index.html#about" class="text-lg">Home</a>
+          </div>
+    </nav>
+  </header>
 
-						</div>
-					</header>
+  <!-- Resume Embed Section -->
+  <section class="container mx-auto px-4 py-20">
+    <div class="flex flex-col items-left">
+      <h1 class="text-4xl font-bold">Resume</h1>
+      <p class="mt-6 text-xl mb-8">This was last updated on the 26th of December '23.</p>
+      <iframe
+      src="./assets/resumes/ShaanYadav_December23.pdf"
+      frameborder="0"
+      width="100%"
+      style="height:100vh;" <!-- This will make the iframe take the full height of the viewport -->
+      class="w-full bg-white"
+      allow="autoplay"
+    ></iframe>
+    </div>
+  </section>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<h1>Resume (September '23)</h1>
-
-							<iframe src="ShaanYadav_November23.pdf" width="100%" height="1000px">
-    					</iframe>
-
-						</div>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>

@@ -1,222 +1,188 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Shaan's website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaan's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Include the custom font if needed */
+    @import url('https://fonts.googleapis.com/css2?family=YourCustomFont:wght@400;700&display=swap');
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+    body {
+      /* Update this if you have a custom font */
+      font-family: "Times New Roman", Times, serif;
+    }
+  </style>
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo2.gif" alt="" /></span><span class="title">Shaan Yadav</span>
-								</a>
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        rel="stylesheet"
+    >
+    
+</head>
 
-						</div>
-					</header>
+<body class="font-serif antialiased text-gray-900 bg-white">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								<h1>My name is <a href="about.html"> Shaan</a>. <br/>
-								</h1>
-								<p>Website has not been updated since Summer 2022. I hope to do remake this soon.</p>
-							</header>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<a href="about.html">
-										<h2>About</h2>
-										<div class="content">
-											<p>A little bit about who I am.</p>
-										</div>
-									</a>
-								</article>
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 bg-white shadow-md">
+    <nav class="container mx-auto px-4 py-4 flex justify-between">
+      <div>
+        <a href="index.html" class="text-2xl font-semibold">Shaan Yadav</a>
+      </div>
+      <div>
+        <a href="#about" class="text-lg">About</a>
+        <a href="#projects" class="text-lg ml-6">Projects</a>
+        <a href="#experience" class="text-lg ml-6">Experience</a>
+        <a href="resume.html" class="text-lg ml-6">Resume</a>
+      </div>
+    </nav>
+  </header>
 
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic08.jpg" alt="" />
-									</span>
-									<a href="projects.html">
-										<h2>Projects</h2>
-										<div class="content">
-											<p>A few of the projects I have worked on recently.</p>
-										</div>
-									</a>
-								</article>
-
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<a href="experiences.html">
-										<h2>Experiences</h2>
-										<div class="content">
-											<p>A few things I have been involved in recently.</p>
-										</div>
-									</a>
-								</article>
-
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<a href="stuff_and_things.html">
-										<h2>Vaguely Interesting</h2>
-										<div class="content">
-											<p>A collection of some things I found vaguely interesting.</p>
-										</div>
-									</a>
-								</article>
-								<article>
-									<span class = "imagetemp">
-										<a href="https://www.linkedin.com/in/shaanyadav/" class="button fit icon solid brands fa-linkedin">LinkedIn</a>
-										<a href="https://github.com/Shaan106" class="button fit icon brands fa-github">GitHub</a>
-										<a href="https://www.youtube.com/channel/UC5ODxBVQlb0qzFhBr1LJ4ug" class="button fit icon brands fa-youtube">Youtube</a>
-									</span>
-										<!--
-									<ul class="actions fit">
-										<li><a href="https://www.linkedin.com/in/shaanyadav/" class="button fit icon solid brands fa-linkedin">LinkedIn</a></li>
-									</ul>
-									<ul class="actions fit">
-										<li><a href="https://github.com/Shaan106" class="button fit icon brands fa-github">GitHub</a></li>
-									</ul>
-									<ul class="actions fit">
-										<li><a href="https://www.youtube.com/channel/UC5ODxBVQlb0qzFhBr1LJ4ug" class="button fit icon brands fa-youtube">Youtube</a></li>
-									</ul>
-								-->
-									<!--<ul class="actions fit">
-										<li><a href="mailto:shaan@yadu.in" class="button fit icon fa-envelope">Contact me</a></li>
-									</ul>-->
-
-								</article>
+  <!-- Hero Section -->
+  <section id="about" class="container mx-auto px-4 py-7 mt-20">
+    <h1 class="text-6xl font-bold">Hi, I'm Shaan.<br> And I like to build things.</h1>
+    <p class="mt-6 text-2xl">I'm currently a sophomore studying Electrical & Computer Engineering and Computer Science at Duke.
+        I made this website to show a few projects I have worked on that I otherwise don't get to. <br>
+        You can find my resume <a href="resume.html"> <b> here</b></a>.</p>
+  </section>
 
 
+  <!-- Links section -->
 
-								<!--
-								<article class="style6">
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Veroeros</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic07.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Ipsum</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic08.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Dolor</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style1">
-									<span class="image">
-										<img src="images/pic09.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Nullam</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Ultricies</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="images/pic11.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Dictum</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic12.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Pretium</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-							-->
-							</section>
-						</div>
-					</div>
+<section class="container mx-auto px-4 py-0 pb-10 mb-10 text-center">
+  <div class="flex justify-left space-x-4">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/shaanyadav/" class="flex items-center space-x-2 text-xl">
+      <span>LinkedIn</span>
+      <i class="fab fa-linkedin fa-lg"></i>
+    </a>
 
-				<!-- Footer
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-				-->
-			</div>
+    <!-- GitHub -->
+    <a href="https://github.com/Shaan106" class="flex items-center space-x-2 text-xl">
+      <span>GitHub</span>
+      <i class="fab fa-github fa-lg"></i>
+    </a>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/watch?v=mePFA-zkgVY" class="flex items-center space-x-2 text-xl">
+      <span>YouTube</span>
+      <i class="fab fa-youtube fa-lg"></i>
+    </a>
 
-	</body>
+    <!-- Email -->
+    <a href="mailto:shaan.yadav@duke.edu" class="flex items-center space-x-2 text-xl">
+        <span>shaan.yadav@duke.edu</span>
+        <i class="fas fa-envelope fa-lg"></i>
+    </a>
+
+  </div>
+</section>
+
+<!-- Numbered Titles Section -->
+
+<section id="projects" class="container mx-auto px-4 py-15">
+
+    <h2 class="text-5xl font-bold mt-10 border-b-2 border-black">a few projects.</h2>
+    <div class="space-y-8">
+
+        <!-- MELANOMA SCAN -->
+        <div class="flex"> <!-- Increased bottom margin for more vertical spacing -->
+            <div class="w-full">
+                <h2 class="text-3xl font-bold pt-4">01_Melanoma Scan</h2>
+            </div>
+        </div>
+
+        <div class="flex">
+            <div class="w-2/3">
+                <p class="mt-0 text-xl pt-0"> <!-- Added top padding to the text content -->
+                    - ConPLex <br>
+                    - MelanomaScan <br>
+                    - TeensInAI Course <br>
+                    - Solar panel dust sensor <br>
+                    - Logisim CPU <br>
+                    - MIPS algorithm <br>
+                    - Vita-Sanare <br>
+                    - Palantir fire <br>
+                    - BBC NewsPal <br>
+                    - CERN BL4S <br>
+                    - NASA Space Apps <br>
+                    - Oppidan Scholar, BMO, Hoberman<br>
+
+                    - books/readings section?
+                </p>
+            </div>
+            <div class="w-1/3 ml-8">
+                <img src="path_to_your_placeholder_image.jpg" alt="Work 1" class="w-full h-auto bg-gray-300">
+            </div>
+        </div>
+
+        <!-- SINGH LAB CONPLEX -->
+
+        <div class="flex items-center mt-10">
+            <div class="flex-grow border-t-2 border-black mr-4"></div> <!-- Horizontal line on the left -->
+            <h2 class="text-3xl font-bold pt-4">02_Machine Learning for Proteins and Drug Discovery</h2>
+        </div>
+
+        <div class="flex">
+            <div class="w-1/3">
+                <img src="path_to_your_placeholder_image.jpg" alt="Work 1" class="w-full h-auto bg-gray-300">
+            </div>
+            <div class="w-2/3 ml-8">
+                <p class="mt-6 text-xl pt-8"> <!-- Added top padding to the text content -->
+                    Bring to the table win-win survival strategies to ensure proactive domination. User generated
+                    content in real-time will have multiple touchpoints for offshoring.
+                </p>
+            </div>
+        </div>
+
+        <!-- SOLAR PANEL ARDUINO -->
+
+        <div class="flex items-center mt-10">
+            <h2 class="text-3xl font-bold pt-4">03_Solar Panel Dust Sensor</h2>
+            <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
+        </div>
+
+
+        <div class="flex">
+            <div class="w-2/3">
+                <p class="mt-6 text-xl pt-8"> <!-- Added top padding to the text content -->
+                    Bring to the table win-win survival strategies to ensure proactive domination. User generated
+                    content in real-time will have multiple touchpoints for offshoring.
+                </p>
+            </div>
+            <div class="w-1/3 ml-8">
+                <img src="path_to_your_placeholder_image.jpg" alt="Work 1" class="w-full h-auto bg-gray-300">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Resume Section -->
+  <section id="experience" class="container mx-auto px-4 py-20">
+    <h2 class="text-4xl font-bold">Services</h2>
+    <div class="flex space-x-6 mt-6">
+      <div class="w-1/3">
+        <h3 class="text-2xl font-semibold border-t-2 border-black pt-4">BRANDING</h3>
+        <p class="mt-4 text-xl">Bring to the table win-win survival strategies to ensure proactive domination.</p>
+      </div>
+      <div class="w-1/3">
+        <h3 class="text-2xl font-semibold border-t-2 border-black pt-4">PRODUCT DESIGNER</h3>
+        <p class="mt-4 text-xl">Bring to the table win-win survival strategies to ensure proactive domination.</p>
+      </div>
+      <div class="w-1/3">
+        <h3 class="text-2xl font-semibold border-t-2 border-black pt-4">UI/UX DESIGNER</h3>
+        <p class="mt-4 text-xl">Bring to the table win-win survival strategies to ensure proactive domination.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="resume" class="container mx-auto px-4 py-20">
+    <h2 class="text-2xl font-bold">shaan.yadav@duke.edu</h2>
+    <p class="mt-6 text-2xl">My resume is <a href="resume.html"> <b> <u> here</u></b></a>. I'd love to hear about any possible opportunities.</p>
+  </section>
+
+</body>
 </html>
