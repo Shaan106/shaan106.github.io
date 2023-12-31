@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaan's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Include the custom font if needed */
+    @import url('https://fonts.googleapis.com/css2?family=YourCustomFont:wght@400;700&display=swap');
+
+    body {
+      /* Update this if you have a custom font */
+      font-family: "Times New Roman", Times, serif;
+    }
+  </style>
+</head>
+<body class="font-serif antialiased text-gray-900 bg-white">
+
+  <!-- Header -->
+
+  <header class="fixed top-0 w-full z-50 bg-white shadow-md">
+    <nav class="container mx-auto px-4 py-4 flex justify-between">
+        <div>
+            <a href="index.html" class="text-3xl font-semibold">Shaan Yadav</a>
+          </div>
+          <div>
+            <a href="index.html#about" class="text-lg">Home</a>
+          </div>
+    </nav>
+  </header>
+
+  <!-- Resume Embed Section -->
+  <section class="container mx-auto px-4 py-20">
+    <div class="flex flex-col items-left">
+      <h1 class="text-4xl font-bold">Melanoma Scan Documentation</h1>
+      <p class="mt-6 text-xl mb-8">This is all the documentation for when I made this app. It's over a hundred pages long and contains everything about making this app, 
+        from <b>ideation to stakeholder identification to interviews to sprints and ticketing to the final product to testing </b></p>
+      <iframe
+      src="./assets/MelanomaScan/Melanoma App - Final Version.pdf"
+      frameborder="0"
+      width="100%"
+      style="height:100vh;" <!-- This will make the iframe take the full height of the viewport -->
+      class="w-full bg-white"
+      allow="autoplay"
+    ></iframe>
+    </div>
+  </section>
+
+</body>
+</html>
