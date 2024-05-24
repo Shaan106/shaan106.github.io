@@ -1,0 +1,10 @@
+.link:hover { color: #ff8800; }
+
+    
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+  /* Update this if you have a custom font */
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white; /* Background color */
+}

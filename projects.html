@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaan's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body class="font-serif antialiased text-gray-900 bg-white">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 bg-white shadow-md">
+    <nav class="container mx-auto px-4 py-4 flex justify-between">
+      <div>
+        <a href="index.html" class="text-2xl font-semibold">Shaan Yadav</a>
+      </div>
+      <div>
+        <a href="index.html" class="text-lg">Home</a>
+      </div>
+    </nav>
+  </header>
+
+  
+<section id="projects" class="container mx-auto px-4 py-15">
+
+    <h2 class="text-5xl font-bold mt-20 border-b-4 border-black">a few projects.</h2>
+    <p class="text-xl mt-5">
+      Here are a few projects I have done, that are a bit longer and more formally documented.
+      <br>
+      Below are links to the projects.
+    </p>
+    
+
+    <!-- LINKS TO PROJECTS SECTION -->
+    <div id="link_wrapper"> 
+
+      <!-- Boids_FPGA -->
+      <a class="link" href="#melanoma_scan">
+        <div class="flex items-center mt-5">
+          <h2 class="text-3xl font-bold pt-4">Boids_FPGA</h2>
+          <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
+          <!-- for if I want to add a date below -->
+          <!-- <p class="text-gray-700">&nbsp 2024</p> -->
+        </div>
+      </a>
+      <div class="flex items-center mt-2">
+        <p>A hardware level implementation of the boids algorithm.</p>
+        <div class="flex-grow border-t-2 border-white mr-4"></div>
+      </div>
+
+      <!-- Melanoma_Scan -->
+      <a class="link" href="#melanoma_scan">
+        <div class="flex items-center mt-1">
+          <h2 class="text-3xl font-bold pt-4">Melanoma_Scan</h2>
+          <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
+          <!-- <p class="text-gray-700">&nbsp 2022</p> -->
+        </div>
+      </a>
+      <div class="flex items-center mt-1">
+        <p>An ios app that can detect skin cancer, and provide important environmental and location based information for melanoma.</p>
+        <div class="flex-grow border-t-2 border-white mr-4"></div>
+      </div>
+
+
+  
+      <!-- code for if I want it on the right -->
+      <!-- <a class="link" href="#melanoma_scan">
+        <div class="flex items-center mt-5">
+          <div class="flex-grow border-t-2 border-black mr-4"></div>
+          <h2 class="text-3xl font-bold pt-4">02_Melanoma_Scan</h2>
+        </div>
+      </a>
+      <div class="flex items-center mt-2">
+        <div class="flex-grow border-t-2 border-white mr-4"></div>
+        <p>sine norerebiabr ebauirb</p>
+      </div> -->
+      
+    </div>
+    
+   
+
+    <div class="mt-10"></div>
+
+
+    <div class="space-y-8">
+
+      <!-- MELANOMA SCAN -->
+      <div id="melanoma_scan">
+      <div class="flex"> <!-- Increased bottom margin for more vertical spacing -->
+        <div class="w-full">
+          <h2 class="text-3xl font-bold pt-4"> <a class="link" href="projects/melanomaScan.html">01_Melanoma Scan</a></h2>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="w-2/3">
+          <p class="mt-0 text-xl pt-0"> <!-- Added top padding to the text content -->
+            <br>
+            Melanoma Scan is a an iOS app I developed to help diagnose skin cancer using just iPhone cameras. I developed everything
+            from the ground up myself, learning about machine learning models, app development, user interfaces, APIs, databases and more.
+            
+            <br> <br>
+
+            There is also a demo linked to the right.
+            <br> <br>
+
+            <a class="link" href="projects/melanomaScan.html"> <b>[Read more]</b></a>
+          </p>
+        </div>
+
+
+        <div class="ml-8 w-1/3">
+          <div class="relative" style="padding-top: 56.25%">
+            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/mePFA-zkgVY?si=wm_IywaCvtiENVAc" frameborder="0" …></iframe>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Singh Lab -->
+      <div>
+      <div class="flex items-center mt-10">
+        <div class="flex-grow border-t-2 border-black mr-4"></div> <!-- Horizontal line on the left -->
+        <h2 class="text-3xl font-bold pt-4">02_Machine Learning for Proteins and Drug Discovery</h2>
+      </div>
+
+      <div class="flex">
+        <div class="w-1/3">
+        
+        <img src="./assets/SinghLab/ConPLexDiagram.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+        
+        </div>
+        <div class="w-2/3 ml-8">
+          <p class="mt-6 text-xl"> <!-- Added top padding to the text content -->
+            I'm currently working under <a class="link" href="https://singhlab.net"> <u>Dr Rohit Singh</u></a> 
+            about machine learning models for better drug development.
+            <br><br>
+            I am further developing the ConPLex deep learning protein language model, which takes in molecule-protein 
+            pairs and efficiently predicts the likelihood that the molecule and protein will interact in a desired manner.
+            <br><br>
+            I am currently improving its accuracy by training it on the LIT-PCBA proteins dataset to improve the model's 
+            prediction capabilities using <a class="link" href="https://paperswithcode.com/task/contrastive-learning"> <u>contrastive learning</u></a>.
+            The goal is to improve the 1-shot prediction capabilities, so that rare genetic diseases may be dealt with much more efficiently.
+            Also developing pipeline to allow non-technical biologists to use model to generate predictions.
+            <br><br>
+          </p>
+        </div>
+
+      </div>
+      </div>
+
+      <!-- SOLAR PANEL ARDUINO -->
+      <div>
+      <div class="flex items-center mt-10">
+        <h2 class="text-3xl font-bold pt-4">03_Solar Panel Dust Sensor</h2>
+        <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
+      </div>
+
+
+      <div class="flex">
+        <div class="w-2/3">
+          <p class="mt-6 text-xl"> <!-- Added top padding to the text content -->
+            Solar panels are an emerging source of renewable energy, 
+            but they often accumulate dust during use that decreases their efficiency significantly. 
+            Our team designed a solar panel dirtiness sensor for Dr. Mike Bergin (Duke University Professor) 
+            and Michael Valerino (Duke University PhD Student) to determine when solar panels require cleaning, 
+            in order to maximize energy output.
+            <br><br>
+            Existing industrial solutions are expensive (over $8,000) and large (around a meter in length). 
+            Additionally, previous teams have tackled this problem with a Raspberry Pi and a backup clock, 
+            which proved cumbersome and time-consuming to set up. With our solution, we hope to tackle these existing problems 
+            and create a low cost, easy to set up, functional sensor.
+            <br><br>
+            To mitigate the global problem of dust accumulation on solar panels, we created a small, 
+            easy to setup sensor that captures magnified photos of dust on a glass slide at specified time intervals.
+          </p>
+          <div class="flex justify-center items-center w-full">
+            <img src="./assets/DustSensor/figLabels.png" alt="Work 1" class="w-2/5 h-auto max-w-full bg-gray-300">
+        </div>
+        </div>
+        <div class="w-1/3 ml-8">
+          <img src="./assets/DustSensor/fig1.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+          <img src="./assets/DustSensor/fig2.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+        </div>
+      </div>
+
+      
+      <!-- Logisim CPU -->
+
+      <div class="flex items-center mt-10">
+        <div class="flex-grow border-t-2 border-black mr-4"></div> <!-- Horizontal line on the left -->
+        <h2 class="text-3xl font-bold pt-4">04_Logisim CPU</h2>
+      </div>
+
+      <div class="flex">
+        <div class="w-2/3">
+          <img src="./assets/Logisim/CPU.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+          <div class="flex w-1/2">
+            <img src="./assets/Logisim/Controller.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+            <img src="./assets/Logisim/MemoryLatch.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+          </div>
+        </div>
+        <div class="w-1/3 ml-8">
+          <p class="mt-6 text-xl pt-8"> <!-- Added top padding to the text content -->
+            Built a fully functioning CPU in Logisim.
+            <br><br>
+            Designed and implemented a fully functioning 16-bit word addressed RISC architecture CPU in Logisim.
+            The CPU is based on the MIPS assembly language.
+            <br><br>
+            Can carry out basic ALU operations such as add, sub, and, not etc. as well as 
+            Program Counter based operations such as jumps (and links), jump returns and branching. 
+            Also dealt with load/storing words into main memory, and dealing with keyboard inputs and displaying outputs.
+            <br><br>
+            Built all components of the CPU from the ground up (using nothing but wires, D flip flops, and/not/or gates and control buffers) 
+            - ie the ALU, controller, shifters, register files, entire CPU pipeline.
+
+          </p>
+        </div>
+      </div>
+  
+      <!-- Raiz Vertical Farms -->
+
+      <div class="flex items-center mt-10">
+        <h2 class="text-3xl font-bold pt-4">05_Raiz Vertical Farms</h2>
+        <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
+      </div>
+
+
+      <div class="flex">
+        <div class="w-2/3">
+          <p class="mt-6 text-xl"> <!-- Added top padding to the text content -->
+            I interned as a software engineer at <a class="link" href="https://www.raiz.farm"> <u>Raiz Vertical Farms</u></a> 
+            in the summer of 2023, which is a startup 
+            that is bringing vertical farms to urban cities, making produce much more environmentally friendly and healthier.
+            <br><br>
+            I collaborated directly with CTO to convert applications (a platform for farm resource management 
+            and allocation and models to optimise hydroponics) from prototype to production stage. 
+            <br><br>
+            I learnt a lot about prototyping and creating demos and minimum viable products by any means possible throughout 
+            this internship. It often involved learning technologies in an extremely niche and specific way in order to get something to work. 
+          </p>
+          <div class="flex justify-center items-center pt-12"> 
+            <img src="assets/Raiz/InvestmentPlatform.png" alt="Work 1" class="w-1/2">
+          </div>
+          <img src="assets/Raiz/Graphs.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+        </div>
+        <div class="w-1/3 ml-8">
+
+          <img src="assets/Raiz/ConceptFarm.png" alt="Work 1" class="bg-gray-300">
+
+          <div class="flex w-1/2">
+            <!-- <img src="./assets/Raiz/ConceptFarm.png" alt="Work 1" class="h-auto bg-gray-300"> -->
+            <img src="./assets/Raiz/Hardware1.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+            <img src="./assets/Raiz/Hardware2.png" alt="Work 1" class="ml-5 w-full h-auto bg-gray-300">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Resume Section -->
+  <section id="experience" class="container mx-auto px-4 py-20">
+    <h2 class="text-4xl font-bold">Other Experience</h2>
+    <div class="flex space-x-6 mt-6">
+      <div class="w-1/3">
+        <h3 class="text-2xl font-semibold border-t-2 border-black pt-4">ECE 110 Teaching Assistant</h3>
+        <p class="mt-4 text-xl">[Desc]</p>
+      </div>
+      <div class="w-1/3">
+        <h3 class="text-2xl font-semibold border-t-2 border-black pt-4">President, Eton Scientific Society</h3>
+        <p class="mt-4 text-xl">[Desc]</p>
+      </div>
+      <div class="w-1/3">
+        <h3 class="text-2xl font-semibold border-t-2 border-black pt-4">TeensInAI mentor/teacher</h3>
+        <p class="mt-4 text-xl"> [Mention NASA and BBC] </p>
+      </div>
+    </div>
+
+    <div class="flex space-x-6 mt-6">
+      <div class="w-1/3">
+        <h3 class="text-2xl font-semibold border-t-2 border-black pt-4">Palantir</h3>
+        <p class="mt-4 text-xl">[Desc]</p>
+      </div>
+      <div class="w-1/3">
+        <h3 class="text-2xl font-semibold border-t-2 border-black pt-4">Books section??</h3>
+        <p class="mt-4 text-xl">[Desc]</p>
+      </div>
+      <div class="w-1/3">
+        <h3 class="text-2xl font-semibold border-t-2 border-black pt-4">Air Filter Project</h3>
+        <p class="mt-4 text-xl">[things things things things]
+          <br><br>
+          also could add an "other section" with stuff like art and skating and hikes?
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="resume" class="container mx-auto px-4 py-20">
+    <h2 class="text-2xl font-bold">shaan.yadav@duke.edu</h2>
+    <p class="mt-6 text-2xl">My resume is <a href="resume.html"> <b> <u> here</u></b></a>.</p>
+
+    <p>
+      - ConPLex <br>
+      - MelanomaScan <br>
+      - TeensInAI Course <br>
+      - Solar panel dust sensor <br>
+      - Logisim CPU <br>
+      - MIPS algorithm <br>
+      - Vita-Sanare <br>
+      - Palantir fire <br>
+      - BBC NewsPal <br>
+      - CERN BL4S <br>
+      - NASA Space Apps <br>
+      - Oppidan Scholar, BMO, Hoberman<br>
+
+      - books/readings section?
+    </p>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+
+</html>
+
