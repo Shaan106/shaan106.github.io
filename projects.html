@@ -36,6 +36,8 @@
     <p class="text-xl mt-5">
       Here are a few projects I have done, that are a bit longer and more formally documented.
       <br>
+      I haven't included things I am currently working on.
+      <br>
       Below are links to the projects.
     </p>
     
@@ -45,7 +47,7 @@
 
       <!-- Boids_FPGA -->
       <div id="boids_link">
-        <a class="link" href="#melanoma_scan">
+        <a class="link" href="#boids_fpga">
           <div class="flex items-center mt-5">
             <h2 class="text-3xl font-bold pt-4">
               ∆ Boids_FPGA 
@@ -56,14 +58,14 @@
           </div>
         </a>
         <div class="flex items-center mt-2">
-          <p>A hardware level implementation of the boids algorithm.</p>
+          <p>A very fast and efficient hardware (verilog + FPGA) implementation of the boids flocking algorithm.</p>
           <div class="flex-grow border-t-2 border-white mr-4"></div>
         </div>
       </div>
 
       <!-- Verilog_MIPS_CPU -->
       <div id="Verilog_CPU_link">
-        <a class="link" href="#melanoma_scan">
+        <a class="link" href="#verilog_mips_cpu">
           <div class="flex items-center mt-1">
             <h2 class="text-3xl font-bold pt-4">⌘ Verilog_MIPS_CPU</h2>
             <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
@@ -71,7 +73,7 @@
           </div>
         </a>
         <div class="flex items-center mt-1">
-          <p>A fully functioning 5 stage, pipelined, bypassed CPU made in verilog from the ground up.</p>
+          <p>A fully functioning 5 stage, pipelined, bypassed CPU made using Verilog from the ground up.</p>
           <div class="flex-grow border-t-2 border-white mr-4"></div>
         </div>
       </div>
@@ -93,7 +95,7 @@
 
       <!-- Solar_Panel_Dust_Sensor -->
       <div id="solar_dust_link">
-        <a class="link" href="#melanoma_scan">
+        <a class="link" href="#solar_panel_dust">
           <div class="flex items-center mt-1">
             <h2 class="text-3xl font-bold pt-4">☼ Solar_Panel_Dust_Sensor</h2>
             <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
@@ -121,20 +123,19 @@
         </div>
       </div>
 
-      <!-- Prosthesics Camp -->
-      <div id="prosthetics_link">
+      <!-- Brewing Concoctions -->
+      <!-- <div id="brewing_link">
         <a class="link" href="#melanoma_scan">
           <div class="flex items-center mt-1">
             <h2 class="text-3xl font-bold pt-4">∮ Brewing_Concoctions</h2>
-            <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
-            <!-- <p class="text-gray-700">&nbsp 2022</p> -->
+            <div class="flex-grow border-t-2 border-black ml-4"></div>
           </div>
         </a>
         <div class="flex items-center mt-1">
           <p>A few larger projects currently in the works.</p>
           <div class="flex-grow border-t-2 border-white mr-4"></div>
         </div>
-      </div>
+      </div> -->
 
       <!-- code for if I want it on the right -->
       <!-- <a class="link" href="#melanoma_scan">
@@ -159,82 +160,193 @@
 
     <div class="space-y-8">
 
-      <!-- MELANOMA SCAN -->
-      <div id="melanoma_scan">
-      <div class="flex"> <!-- Increased bottom margin for more vertical spacing -->
-        <div class="w-full">
-          <h2 class="text-3xl font-bold pt-4"> <a class="link" href="projects/melanomaScan.html">01_Melanoma Scan</a></h2>
+      <!-- boids_fpga-->
+      <div id="boids_fpga">
+        <div class="flex items-center mt-5">
+          <h2 class="text-3xl font-bold pt-4">∆ Boids_FPGA</h2>
+          <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
+          <a href="https://github.com/Shaan106/Boids_FPGA" class="link flex items-center space-x-2 text-xl">
+            <p>&nbsp</p>
+            <i class="fab fa-github fa-xl"></i>
+            <span class="text-xl">github.com/Shaan106/<b>Boids_FPGA</b></span>
+          </a>
         </div>
-      </div>
 
       <div class="flex">
         <div class="w-2/3">
-          <p class="mt-0 text-xl pt-0"> <!-- Added top padding to the text content -->
+          <p class="mt-0 text-lg pt-0"> <!-- Added top padding to the text content -->
             <br>
-            Melanoma Scan is a an iOS app I developed to help diagnose skin cancer using just iPhone cameras. I developed everything
-            from the ground up myself, learning about machine learning models, app development, user interfaces, APIs, databases and more.
-            
-            <br> <br>
+            The goal of this project was to build an efficient low level implementation of the Boid Algorithm - an algorithm that simulates the flocking behavior of birds, or organisms in general.
+            <br><br>
+            The initial simulation was done in Python, where we showed the limitations we get when we try to simulate a large number of boids on a CPU-like architecture. We decided to create a hardware level implementation of this algorithm using Verilog and FPGAs to demonstrate that a much more efficient computational model is possible at the hardware level.
+            <br><br>
+            An in detail writeup can be found on the github readme, but the general outline of the project can be seen below:
+            <br><br>
+            <ul>
+              <li class="text-xl">» High Level Simulations
+                <ul>
+                  <li class="text-base">&nbsp &nbsp &nbsp &nbsp » Python Pygame Simulation (with no use of multiplication/division)</li>
+                  <li class="text-base">&nbsp &nbsp &nbsp &nbsp » Simulation in C (with a few optimizations)</li>
+                </ul>
+              </li>
 
-            There is also a demo linked to the right.
-            <br> <br>
+              <li class="text-xl">» Compilation</li>
+                <ul>
+                  <li>&nbsp &nbsp &nbsp &nbsp » Custom compilation from C to our custom MIPS instruction set</li>
+                  <li>&nbsp &nbsp &nbsp &nbsp » Custom MIPS simulator (test our compiled code, before time intensive FPGA testing)</li>
+                  <li>&nbsp &nbsp &nbsp &nbsp » Testing for our CPU with a verilog testbench</li>
+                </ul>
+              
+              <li class="text-xl">» Custom Hardware Units (Verilog)</li>
+                <ul>
+                  <li>&nbsp &nbsp &nbsp &nbsp » BPU (Boid Processing Unit, deals with a single boid's information)</li>
+                  <li>&nbsp &nbsp &nbsp &nbsp » Canvas RAM (Custom RAM implementation that allows for extremely VGA Screen updates)</li>
+                  <li>&nbsp &nbsp &nbsp &nbsp » VGA Screen Controller (Controls interactions with display)</li>
+                  <li>&nbsp &nbsp &nbsp &nbsp » I/O & regfile (custom implentation for better communication)</li>
+                </ul>
 
-            <a class="link" href="projects/melanomaScan.html"> <b>[Read more]</b></a>
+              <li class="text-xl">» CPU</li>
+                <ul>
+                  <li>&nbsp &nbsp &nbsp &nbsp » Custom built 5-stage pipelined MIPS CPU</li>
+                  <li>&nbsp &nbsp &nbsp &nbsp » Has its own seperate section <a href="#verilog_mips_cpu"><b>here</b></a></li>
+                </ul>
+
+              <li class="text-xl">» Future Work/Bloopers</li>
+                <ul>
+                  <li>&nbsp &nbsp &nbsp &nbsp » More details about the project and work can be found on the <a href="https://github.com/Shaan106/Boids_FPGA"><b>GitHub</b></a></li>
+                </ul>
+            </ul>
+
           </p>
         </div>
 
 
         <div class="ml-8 w-1/3">
           <div class="relative" style="padding-top: 56.25%">
-            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/mePFA-zkgVY?si=wm_IywaCvtiENVAc" frameborder="0" …></iframe>
+            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/ht7rk9lN3hA?si=XtUcdOS5CNon4bvj" frameborder="0" …></iframe>
           </div>
+          <br>
+          <img src="./assets/Boids_FPGA/pygame_boids2.png" alt="Work 1" class="w-full h-auto bg-gray-300">
         </div>
       </div>
       </div>
 
-      <!-- Singh Lab -->
-      <div>
-      <div class="flex items-center mt-10">
-        <div class="flex-grow border-t-2 border-black mr-4"></div> <!-- Horizontal line on the left -->
-        <h2 class="text-3xl font-bold pt-4">02_Machine Learning for Proteins and Drug Discovery</h2>
-      </div>
+      <!-- verilog_mips_cpu -->
+      <div id="verilog_mips_cpu">
+
+        <div class="flex items-center mt-5">
+          <h2 class="text-3xl font-bold pt-4">⌘ Verilog_MIPS_CPU</h2>
+          <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
+          <a href="https://github.com/Shaan106/Duke_Courses/tree/main/ECE%20350/Final%20CPU" class="link flex items-center space-x-2 text-xl">
+            <p>&nbsp</p>
+            <i class="fab fa-github fa-xl"></i>
+            <span class="text-xl">github.com/Shaan106/ECE_350/<b>Final_CPU</b></span>
+          </a>
+        </div>
 
       <div class="flex">
-        <div class="w-1/3">
-        
-        <img src="./assets/SinghLab/ConPLexDiagram.png" alt="Work 1" class="w-full h-auto bg-gray-300">
-        
-        </div>
-        <div class="w-2/3 ml-8">
-          <p class="mt-6 text-xl"> <!-- Added top padding to the text content -->
-            I'm currently working under <a class="link" href="https://singhlab.net"> <u>Dr Rohit Singh</u></a> 
-            about machine learning models for better drug development.
+        <div class="w-2/3">
+          <p class="mt-0 text-lg pt-0"> <!-- Added top padding to the text content -->
+            <br>
+            This CPU came out of the Digital Systems course at Duke University. It is a fully functioning 5 stage, pipelined, bypassed, error handling MIPS CPU. Its instruction set can be seen here on the right.
             <br><br>
-            I am further developing the ConPLex deep learning protein language model, which takes in molecule-protein 
-            pairs and efficiently predicts the likelihood that the molecule and protein will interact in a desired manner.
-            <br><br>
-            I am currently improving its accuracy by training it on the LIT-PCBA proteins dataset to improve the model's 
-            prediction capabilities using <a class="link" href="https://paperswithcode.com/task/contrastive-learning"> <u>contrastive learning</u></a>.
-            The goal is to improve the 1-shot prediction capabilities, so that rare genetic diseases may be dealt with much more efficiently.
-            Also developing pipeline to allow non-technical biologists to use model to generate predictions.
-            <br><br>
+            I have included a diagram (end of this section) I made while creating the CPU to show the scale of the datapath, not including the intrecacies of each componenet (such as the wallace tree multiplier not being drawn out for obvious reasons). Some features are highlighted below:
+            <br><br>  
+            <ul>
+              <li class="text-base">» 32-bit 100MHz processor</li>
+              <li class="text-base">» Pipelined and Bypassed</li>
+              <li class="text-base">» Handles hazards (no invalid computations returned)</li>
+              <li class="text-base">» Wallace Tree multiplier</li>
+              <li class="text-base">» Restoring Division Divider</li>
+              <li class="text-base">» CLA adder/subtractor</li>
+            </ul>
+
+            <br>
+            Everything from the logic gates to the DFFs to the entire datapath was created by myself. Source code can be found on the GitHub repository.
+
           </p>
         </div>
 
+
+        <div class="ml-8 w-1/3">
+          <img src="./assets/Verilog_MIPS_CPU/instruction_set.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+        </div>
       </div>
+      <img src="./assets/Verilog_MIPS_CPU/CPU_full.png" alt="Work 1" class="w-full h-auto bg-gray-300 mt-2">
       </div>
 
-      <!-- SOLAR PANEL ARDUINO -->
-      <div>
+       <!-- Melanoma Scan -->
+    <div id="melanoma_scan" class="flex flex-col items-left">
+      <!-- <h1 class="text-4xl font-bold border-b-2 border-black mb-5 mt-5">Melanoma Scan</h1> -->
+      <div class="flex items-center mt-5">
+          <h2 class="text-3xl font-bold pt-4">ꐠ Melanoma_Scan</h2>
+          <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
+          <a href="https://github.com/Shaan106/MelanomaScan" class="link flex items-center space-x-2 text-xl">
+            <p>&nbsp</p>
+            <i class="fab fa-github fa-xl"></i>
+            <span class="text-xl">github.com/Shaan106/<b>MelanomaScan</b></span>
+          </a>
+        </div>
+      <div class="flex mt-2">
+        <div class="w-2/3">
+          <p class="mt-0 text-lg pt-0"> <!-- Added top padding to the text content -->
+            Melanoma Scan is a an iOS app I developed to help diagnose skin cancer using just iPhone cameras.
+            Here's <a class="link" href="https://www.youtube.com/watch?v=mePFA-zkgVY"> <u>the app demo</u></a>.
+            <br> <br>
+    
+            I developed this app using XCode, and built the image classfication model with inspiration from the
+            <a class="link" href="https://arxiv.org/abs/1512.00567"><u>Inception v3 model</u></a>. I have documented
+            everything about developing
+            the app (from the ideation to stakeholder interviews to sprints & ticketing to testing and evaluation), and you
+            can see it all below.
+    
+            <br><br>
+    
+            I learnt a lot through this project, such as full stack development, proper use of OOP, using APIs, creating and
+            optimising ML models,
+            using phone hardware (GPS and Cameras), data clearning & management, user-friendly and intuitive design, all
+            while maintaining that the stakeholders are satisfied.
+            <br><br>
+          </p>
+          <div class="relative" style="padding-top: 56.25%">
+            <iframe class="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/mePFA-zkgVY?si=wm_IywaCvtiENVAc" frameborder="0" …></iframe>
+          </div>
+        </div>
+    
+    
+        <div class="ml-8 w-1/3">
+          <div class="flex w-1/2">
+            <img src="./assets/MelanomaScan/home_screen.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+            <img src="./assets/MelanomaScan/malignant_classification.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+          </div>
+          <div class="flex w-1/2">
+            <img src="./assets/MelanomaScan/environmental_risks.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+            <img src="./assets/MelanomaScan/phenotype_risk.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+          </div>
+        </div>
+      </div>
+    
+      <p class="mt-6 text-xl mb-8">This is all the documentation for when I made this app. It's over a hundred pages long
+        and contains everything about making this app,
+        from ideation to stakeholder identification to interviews to sprints and ticketing to the final product to testing
+      </p>
+      <iframe src="./assets/MelanomaScan/Melanoma App - Final Version.pdf" frameborder="0" width="100%"
+        style="height:100vh;" class="w-full bg-white" allow="autoplay"></iframe>
+    </div>
+
+
+          <!-- SOLAR PANEL ARDUINO -->
+      <div id="solar_panel_dust">
       <div class="flex items-center mt-10">
-        <h2 class="text-3xl font-bold pt-4">03_Solar Panel Dust Sensor</h2>
+        <h2 class="text-3xl font-bold pt-4">☼ Solar_Panel_Dust_Sensor</h2>
         <div class="flex-grow border-t-2 border-black ml-4"></div> <!-- Horizontal line -->
       </div>
 
 
       <div class="flex">
         <div class="w-2/3">
-          <p class="mt-6 text-xl"> <!-- Added top padding to the text content -->
+          <p class="mt-6 text-lg"> <!-- Added top padding to the text content -->
             Solar panels are an emerging source of renewable energy, 
             but they often accumulate dust during use that decreases their efficiency significantly. 
             Our team designed a solar panel dirtiness sensor for Dr. Mike Bergin (Duke University Professor) 
@@ -257,6 +369,7 @@
           <img src="./assets/DustSensor/fig1.png" alt="Work 1" class="w-full h-auto bg-gray-300">
           <img src="./assets/DustSensor/fig2.png" alt="Work 1" class="w-full h-auto bg-gray-300">
         </div>
+      </div>
       </div>
 
       
@@ -333,6 +446,40 @@
       </div>
 
     </div>
+      
+      <!-- Singh Lab -->
+      <div>
+      <div class="flex items-center mt-10">
+        <div class="flex-grow border-t-2 border-black mr-4"></div> <!-- Horizontal line on the left -->
+        <h2 class="text-3xl font-bold pt-4">02_Machine Learning for Proteins and Drug Discovery</h2>
+      </div>
+
+      <div class="flex">
+        <div class="w-1/3">
+        
+        <img src="./assets/SinghLab/ConPLexDiagram.png" alt="Work 1" class="w-full h-auto bg-gray-300">
+        
+        </div>
+        <div class="w-2/3 ml-8">
+          <p class="mt-6 text-xl"> <!-- Added top padding to the text content -->
+            I'm currently working under <a class="link" href="https://singhlab.net"> <u>Dr Rohit Singh</u></a> 
+            about machine learning models for better drug development.
+            <br><br>
+            I am further developing the ConPLex deep learning protein language model, which takes in molecule-protein 
+            pairs and efficiently predicts the likelihood that the molecule and protein will interact in a desired manner.
+            <br><br>
+            I am currently improving its accuracy by training it on the LIT-PCBA proteins dataset to improve the model's 
+            prediction capabilities using <a class="link" href="https://paperswithcode.com/task/contrastive-learning"> <u>contrastive learning</u></a>.
+            The goal is to improve the 1-shot prediction capabilities, so that rare genetic diseases may be dealt with much more efficiently.
+            Also developing pipeline to allow non-technical biologists to use model to generate predictions.
+            <br><br>
+          </p>
+        </div>
+
+      </div>
+      </div>
+
+
   </section>
 
 
