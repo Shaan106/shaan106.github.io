@@ -32,51 +32,114 @@
     <!-- Musings section -->
     <section class="container mx-auto px-4 mt-20">
         <div class="flex flex-col items-left">
-            <h1 class="text-4xl font-bold border-b-2 border-black">Some Musings.</h1>
-            <p class="mt-6 text-xl mb-5">Sometimes I have find things that I think are quite interesting,
-                                        if interesting enough I'll try put my half baked thoughts onto here. <br>
+            <h1 class="text-4xl font-bold border-b-2 border-black">Some Vaguely Interesting Stuff.</h1>
+            <p class="mt-6 text-lg mb-5">Sometimes I have find things that I think are quite interesting,
+                                        I will try to document some interesting things I learn onto here.
+                                        <br>
                                         Inspired by <a href="mitxela.com" class="link"><u>mitxela.com</u></a></p>
-
         </div>
     </section>
 
     <!-- Blog section -->
     <section class="container mx-auto px-4 mt-5">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <a href="index.html" class="link">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="path_to_image" alt="Blog Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Title 1</h2>
-                        <p class="text-gray-700 mb-4">Brief descriptive paragraph 1</p>
-                        <p class="text-gray-500 text-sm">Date 1</p>
-                    </div>
+            <!-- Card 3, CUDA -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
+                <img src="./assets/quaint_projects/CUDA.png" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold mb-2">CUDA is very fast</h2>
+                    <p class="text-gray-700 mb-2">
+                        CUDA in C is indeed very fast. I see why people use it.
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        I learnt how to write CUDA code for C, deal with memory allocation and transfer, how to write kernels.
+                        The speedup compared to a CPU implementation of a 3 body problem I wrote was ~70x, which was quite surprising.
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                       Initial motivation was to significantly speed up the 
+                       <a href="https://msfragger.nesvilab.org" class="link"><u>MSFragger algorithm</u></a>
+                       for proteomics.
+                    </p>
+                    
+                    <p class="text-gray-500 text-sm mt-auto">Saturday, 25th May 2022</p>
+                    <a href="https://github.com/Shaan106/Quaint-Collection-Of-Projects/tree/main/CUDA%20in%20C" class="link flex items-center text-sm">
+                        <i class="fab fa-github fa-sm"></i>
+                        <span class="text-sm">/Quaint-Collection-Of-Projects/<b>CUDA_in_C</b></span>
+                    </a>
                 </div>
-            </a>
-            <!-- Card 2 -->
-            <a href="index.html" class="link">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="path_to_image" alt="Blog Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Title 2</h2>
-                        <p class="text-gray-700 mb-4">Brief descriptive paragraph 1</p>
-                        <p class="text-gray-500 text-sm">Date 2</p>
-                    </div>
+            </div>
+
+            <!-- Card 2, DOOM -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
+                <img src="./assets/quaint_projects/doom-demo.gif" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold mb-2">Can it beat DOOM?</h2>
+                    <p class="text-gray-700 mb-2">
+                        I have been quite interested in the idea of q learning for a while, so decided to beat DOOM with it.
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        The general idea was to create agents that play DOOM, and update strategy based on a reward 
+                        using the <a href="https://en.wikipedia.org/wiki/Proximal_policy_optimization#:~:text=PPO%20is%20classified%20as%20a,reliably%20reach%20the%20optimal%20solution." class="link">
+                            <u>PPO</u>
+                        </a> algorithm. 
+                        It worked quite well for the first level (albeit the model only needs to move right, left or shoot using visual cues). 
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        I'd quite like to work with the <a href="https://neuralmmo.github.io/_build/html/rst/landing.html" class="link"><u>
+                            Neural MMO
+                        </u></a>
+                        environment next, developed by Joeseph Suarez. 
+                        It's a very RL friendly environment that simulates a very, very complex system.
+                    </p>
+                    <p class="text-gray-500 text-sm mt-auto">Saturday, 25th May 2022</p>
+                    <a href="https://github.com/Shaan106/Quaint-Collection-Of-Projects/tree/main/Beat%20DOOM" class="link flex items-center text-sm">
+                        <i class="fab fa-github fa-sm"></i>
+                        <span class="text-sm">/Quaint-Collection-Of-Projects/<b>Beat_DOOM</b></span>
+                    </a>
                 </div>
-            </a>
-            <!-- Card 3 -->
-            <a href="index.html" class="link">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="path_to_image" alt="Blog Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Title 3</h2>
-                        <p class="text-gray-700 mb-4">Brief descriptive paragraph 1</p>
-                        <p class="text-gray-500 text-sm">Date 3</p>
-                    </div>
+            </div>
+
+            <!-- Card 1, website -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
+                <img src="assets/quaint_projects/mywebsite.png" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold mb-2">shaan106.github.io</h2>
+                    <p class="text-gray-700 mb-2">
+                        I thought I'd start with this website.
+                        I learnt a bit of HTML, CSS and other webdev stuff, and though I'd put it to use making somewhere I put things I've done.
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        I soon realised making custom CSS for everything is very much not worth it,
+                        so I made use of Tailwind CSS. The code for this website is on my github, 
+                        and probably quite unreadable.
+                    </p>
+                    <p class="text-gray-500 text-sm mt-auto">Saturday, 25th May 2022</p>
+                    <a href="https://github.com/Shaan106/shaan106.github.io" class="link flex items-center text-sm">
+                        <i class="fab fa-github fa-sm"></i>
+                        <span class="text-sm">/<b>shaan106.github.io</b></span>
+                    </a>
                 </div>
-            </a>
-            <!-- Add more cards here -->
+            </div>
+
+
+            <!-- CARD 0 -->
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
+                <img src="things" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold mb-2">...</h2>
+                    <p class="text-gray-700 mb-2">
+                        [empty]
+                        <br>
+                        maybe add a table of contents?
+                    </p>
+                    <p class="text-gray-500 text-sm mt-auto">soon</p>
+                    <a href="https://github.com/Shaan106/" class="link flex items-center text-sm">
+                        <i class="fab fa-github fa-sm"></i>
+                        <span class="text-sm">/<b>Shaan106</b></span>
+                    </a>
+                </div>
+            </div>
             
         </div>
     </section>
