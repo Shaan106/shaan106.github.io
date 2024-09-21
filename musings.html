@@ -43,13 +43,75 @@
     <!-- Blog section -->
     <section class="container mx-auto px-4 mt-5">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Card 5, BCIs -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
+                <img src="./assets/quaint_projects/SCALO.png" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold mb-2">BCIs and ISA-less chips</h2>
+                    <p class="text-gray-700 mb-2">
+                        This summer I was fortunate enough to start working with 
+                        <a href="http://www.cs.yale.edu/homes/abhishek/" class="link"><u>Prof Bhattacharjee</u></a>
+                        at Yale designing BCI chips.
+                        Specifically, I was designing a simulation tool that could model arbitrary BCI algorithms at the hardware level.
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        Something that stood out to me about the 
+                        <a href="https://www.anuragkhandelwal.com/papers/scalo.pdf" class="link"><u>SCALO chip design</u></a>
+                        was the idea of design chips without an ISA.
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        Simply putting a generalised solution for a specific task onto an accelerator 
+                        and then creating a network of accelerators that are then optimised by some graph scheme could lead to a new way of doing computation,
+                        further than just BCIs.
+                    </p>
+                    <p class="text-gray-700 mb-2"></p>
+                        Some real value could be added in making algorithms lie closer to the hardware, 
+                        and compute faster and more energy efficiently.
+                    </p>
+                    
+                    <p class="text-gray-500 text-sm mt-auto">Saturday, 21st September 2024</p>
+                    <a href="https://github.com/Shaan106/" class="link flex items-center text-sm">
+                        <i class="fab fa-github fa-sm"></i>
+                        <span class="text-sm">/<b>closed-source-for-now-:(</b></span>
+                    </a>
+                </div>
+            </div>
+
+
+             <!-- Card 4, Gem5 -->
+             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
+                <img src="./assets/quaint_projects/gem5.png" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold mb-2">Gem5 and Processor Simulation</h2>
+                    <p class="text-gray-700 mb-2">
+                        How does one evaluate a new design choice for a hardware system? 
+                        It's unreasonable to create rtl files and write testbenches on the scale of a fully functioning x86 processor. 
+                        Too much work and computation for something that could be a bad idea.
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        I recently started using simulator models for a research project, specifically <a href="https://www.gem5.org" class="link"><u>Gem5</u></a> (and simplescalar although I didn't like that as much). 
+                        The ability to model entire systems and run programs like operating systems to evaluate them is essential for chip design - and it's surprisingly incomplete for something so important (at least in the public domain). 
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        Also, now this makes me curious as to what simulators for very closed and secretive architectures (ie Apple's M series chips) are like.
+                    </p>
+                    
+                    <p class="text-gray-500 text-sm mt-auto">Saturday, 21st September 2024</p>
+                    <a href="https://github.com/Shaan106/CheckerChip" class="link flex items-center text-sm">
+                        <i class="fab fa-github fa-sm"></i>
+                        <span class="text-sm">/<b>CheckerChip</b></span>
+                    </a>
+                </div>
+            </div>
+
             <!-- Card 3, CUDA -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
                 <img src="./assets/quaint_projects/CUDA.png" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6 flex flex-col flex-grow">
                     <h2 class="text-xl font-bold mb-2">CUDA is very fast</h2>
                     <p class="text-gray-700 mb-2">
-                        CUDA in C is indeed very fast.
+                        CUDA with C is very fast. Basically GPUs are very fast, but finding a way to get independent instructions that can be run in parallel is difficult and often not possible. If it was possible, no one (I think?) would use CPUs except in niche cases as GPUs are just inherintly more power efficient and faster if we can get them independent instructions.
                     </p>
                     <p class="text-gray-700 mb-2">
                         I learnt how to write CUDA code for C, deal with memory allocation and transfer, how to write kernels.
@@ -61,7 +123,7 @@
                        for proteomics.
                     </p>
                     
-                    <p class="text-gray-500 text-sm mt-auto">Saturday, 25th May 2022</p>
+                    <p class="text-gray-500 text-sm mt-auto">Saturday, 25th May 2024</p>
                     <a href="https://github.com/Shaan106/Quaint-Collection-Of-Projects/tree/main/CUDA%20in%20C" class="link flex items-center text-sm">
                         <i class="fab fa-github fa-sm"></i>
                         <span class="text-sm">/Quaint-Collection-Of-Projects/<b>CUDA_in_C</b></span>
@@ -91,7 +153,7 @@
                         environment next, developed by Joeseph Suarez. 
                         It's a very RL friendly environment that simulates a very, very complex system.
                     </p>
-                    <p class="text-gray-500 text-sm mt-auto">Saturday, 25th May 2022</p>
+                    <p class="text-gray-500 text-sm mt-auto">Saturday, 25th May 2024</p>
                     <a href="https://github.com/Shaan106/Quaint-Collection-Of-Projects/tree/main/Beat%20DOOM" class="link flex items-center text-sm">
                         <i class="fab fa-github fa-sm"></i>
                         <span class="text-sm">/Quaint-Collection-Of-Projects/<b>Beat_DOOM</b></span>
@@ -113,7 +175,7 @@
                         so I made use of Tailwind CSS. The code for this website is on my github, 
                         and probably quite unreadable.
                     </p>
-                    <p class="text-gray-500 text-sm mt-auto">Saturday, 25th May 2022</p>
+                    <p class="text-gray-500 text-sm mt-auto">Saturday, 25th May 2024</p>
                     <a href="https://github.com/Shaan106/shaan106.github.io" class="link flex items-center text-sm">
                         <i class="fab fa-github fa-sm"></i>
                         <span class="text-sm">/<b>shaan106.github.io</b></span>
