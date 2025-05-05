@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZNWNP5P1M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BZNWNP5P1M');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boids_FPGA - Shaan's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+
+<body class="font-serif antialiased text-gray-900 bg-white">
+  <!-- Header -->
+  <header class="top-0 w-full z-50 bg-white shadow-md">
+    <nav class="container mx-auto px-4 py-4 flex justify-between">
+      <div>
+        <a href="../index.html" class="text-2xl font-semibold link">Shaan Yadav</a>
+      </div>
+      <div>
+        <a href="../projects.html" class="text-lg link">Back to Projects</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="boids_fpga" class="container mx-auto px-4 py-15">
+    <div class="flex items-center mt-5">
+      <h2 class="text-3xl font-bold pt-4">∆ Boids_FPGA</h2>
+      <div class="flex-grow border-t-2 border-black ml-4"></div>
+      <a href="https://github.com/Shaan106/Boids_FPGA" class="link flex items-center space-x-2 text-xl">
+        <p>&nbsp</p>
+        <i class="fab fa-github fa-xl"></i>
+        <span class="text-xl">github.com/Shaan106/<b>Boids_FPGA</b></span>
+      </a>
+    </div>
+
+    <div class="flex">
+      <div class="w-2/3">
+        <p class="mt-0 text-lg pt-0">
+          <br>
+          The goal of this project was to build an efficient low level implementation of the Boid Algorithm - an algorithm that simulates the flocking behavior of birds, or organisms in general.
+          <br><br>
+          The initial simulation was done in Python, where we showed the limitations we get when we try to simulate a large number of boids on a CPU-like architecture. We decided to create a hardware level implementation of this algorithm using Verilog and FPGAs to demonstrate that a much more efficient computational model is possible at the hardware level.
+          <br><br>
+          An in detail writeup can be found on the github readme, but the general outline of the project can be seen below:
+          <br><br>
+          <ul>
+            <li class="text-xl">» High Level Simulations
+              <ul>
+                <li class="text-base">&nbsp &nbsp &nbsp &nbsp » Python Pygame Simulation (with no use of multiplication/division)</li>
+                <li class="text-base">&nbsp &nbsp &nbsp &nbsp » Simulation in C (with a few optimizations)</li>
+              </ul>
+            </li>
+
+            <li class="text-xl">» Compilation</li>
+              <ul>
+                <li>&nbsp &nbsp &nbsp &nbsp » Custom compilation from C to our custom MIPS instruction set</li>
+                <li>&nbsp &nbsp &nbsp &nbsp » Custom MIPS simulator (test our compiled code, before time intensive FPGA testing)</li>
+                <li>&nbsp &nbsp &nbsp &nbsp » Testing for our CPU with a verilog testbench</li>
+              </ul>
+            
+            <li class="text-xl">» Custom Hardware Units (Verilog)</li>
+              <ul>
+                <li>&nbsp &nbsp &nbsp &nbsp » BPU (Boid Processing Unit, deals with a single boid's information)</li>
+                <li>&nbsp &nbsp &nbsp &nbsp » Canvas RAM (Custom RAM implementation that allows for extremely VGA Screen updates)</li>
+                <li>&nbsp &nbsp &nbsp &nbsp » VGA Screen Controller (Controls interactions with display)</li>
+                <li>&nbsp &nbsp &nbsp &nbsp » I/O & regfile (custom implentation for better communication)</li>
+              </ul>
+
+            <li class="text-xl">» CPU</li>
+              <ul>
+                <li>&nbsp &nbsp &nbsp &nbsp » Custom built 5-stage pipelined MIPS CPU</li>
+                <li>&nbsp &nbsp &nbsp &nbsp » Has its own seperate section <a href="verilog_mips_cpu.html"><b>here</b></a></li>
+              </ul>
+
+            <li class="text-xl">» Future Work/Bloopers</li>
+              <ul>
+                <li>&nbsp &nbsp &nbsp &nbsp » More details about the project and work can be found on the <a href="https://github.com/Shaan106/Boids_FPGA"><b>GitHub</b></a></li>
+              </ul>
+          </ul>
+        </p>
+      </div>
+
+      <div class="ml-8 w-1/3">
+        <div class="relative" style="padding-top: 56.25%">
+          <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/ht7rk9lN3hA?si=XtUcdOS5CNon4bvj" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br>
+        <img src="../assets/Boids_FPGA/pygame_boids2.png" alt="Boids Simulation" class="w-full h-auto bg-gray-300">
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+</html> 
