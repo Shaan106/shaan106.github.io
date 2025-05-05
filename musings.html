@@ -53,6 +53,37 @@
     <section class="container mx-auto px-4 mt-5">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+            <!-- Card 6, SAT solving -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
+                <img src="./assets/quaint_projects/SAT_solving.png" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold mb-2">SAT solving</h2>
+                    <p class="text-gray-700 mb-2">
+                        I took a class with Dr Brian Towles about parallel architectures (consistency, gpus, accelerating ML etc),
+                        and for the final project ended up trying to deal with the NP-hard problem of SAT solving.
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        SAT solving is essentially figuring out if a given boolean formula is satisfiable (ie can we find some 
+                        combination of assignments such as A=1, B=0, C=1, etc such that the formula is true). It is hard because 
+                        there are exponentially many combinations to check. It is also very useful from mathematics to circuit testing to 
+                        the design of new drugs.
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        This problem is theoretically very parallelisable, however due to bad memory locality and control flow overhead associated 
+                        with the problem, it is hard to speedup. We ended up creating a custom architecture that can be summarized as a work-stealing 
+                        grid of nodes, and our simulator showed us that we have a speedup of around 100x over the MiniSAT solver (software state of the art). 
+                        Obviously better evaluation and thorough testing is needed, but it seems promising.
+                    </p>
+                    
+                    <p class="text-gray-500 text-sm mt-auto">Monday, 5th May 2025</p>
+                    <a href="https://github.com/TateStaples/SatSwarm" class="link flex items-center text-sm">
+                        <i class="fab fa-github fa-sm"></i>
+                        <span class="text-sm">/<b>SatSwarm</b></span>
+                    </a>
+                </div>
+            </div>
+            
+
             <!-- Card 5, BCIs -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
                 <img src="./assets/quaint_projects/SCALO.png" alt="Blog Image" class="w-full h-48 object-cover">
