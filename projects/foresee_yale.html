@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZNWNP5P1M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BZNWNP5P1M');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foresee - Shaan's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+
+<body class="font-serif antialiased text-gray-900 bg-white">
+  <!-- Header -->
+  <header class="top-0 w-full z-50 bg-white shadow-md">
+    <nav class="container mx-auto px-4 py-4 flex justify-between">
+      <div>
+        <a href="../index.html" class="text-2xl font-semibold link">Shaan Yadav</a>
+      </div>
+      <div>
+        <a href="../projects.html" class="text-lg link">Back to Projects</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="boids_fpga" class="container mx-auto px-4 py-15">
+    <div class="flex items-center mt-5">
+      <h2 class="text-3xl font-bold pt-4">🝆 Foresee</h2>
+      <div class="flex-grow border-t-2 border-black ml-4"></div>
+      <a href="https://github.com/ysarch-lab/foresee" class="link flex items-center space-x-2 text-xl">
+        <p>&nbsp</p>
+        <i class="fab fa-github fa-xl"></i>
+        <span class="text-xl">github.com/ysarch-lab/<b>foresee</b></span>
+      </a>
+    </div>
+
+    <div class="flex">
+      <div class="w-2/3">
+        <p class="mt-0 text-lg pt-0">
+
+
+          <br>
+
+          This project started from my summer at Yale researching under <a href="https://www.cs.yale.edu/homes/abhishek/" class="link"> <u>Professor Abhishek Bhattacharjee</u></a> and
+          soon to be Professor <a href="https://cs.yale.edu/homes/raghav/index.php" class="link"><u>Raghavendra Pradyumna Pothukuchi</u></a>.
+          I started out making specific hardware blocks building on the lab's previous works <i>HALO</i> and <i>SCALO</i>, such as a verilog FFT block,
+          but soon realized that the lab - and the BCI community as a whole - needed a more general purpose framework for co-designing BCI processors with their algorithms.
+
+          <br>
+          <br>
+
+          The resulting paper was accepted at <a href="https://embc.embs.org/2025/" class="link"> <u>IEEE EMBS 2025</u></a>, which is the world's largest biomedical engineering conference.
+          <i>Once available, link to paper will be added here.</i>
+
+          <br>
+          <br>
+
+          <i>
+          Abstract— Brain-computer interfaces (BCIs) with processing integrated on the device enable fast and autonomous closed-loop interaction with the brain. While such BCIs are rapidly gaining traction, they are also difficult to design due to the tight and conflicting power and performance needs of on-device processing. Meeting these specifications often requires the BCI processors to be co-designed with applications and algorithms, with processor designers and computational neuroscientists working closely to converge on the target hardware platform. But, this process has traditionally been cumbersome and ad hoc, due to the lack of systematic design space exploration frameworks. In response, we present Foresee, a new framework for fast exploration of BCI processors. Foresee offers a unified and modular interface for iteratively co-optimizing BCI processors with their algorithms, without sacrificing accuracy, speed, or ease of use. Foresee is publicly available, and comes with a library of hardware blocks for common signal processing functions that the community could contribute and build on. We demonstrate Foresee's utility and capability by analyzing on-device processing for two seizure detection methods from prior work, and validating our analysis on real hardware. We expect Foresee to be vital in designing next-generation BCIs
+          </i>
+        </p>
+      </div>
+
+      <div class="ml-8 w-1/2">
+        
+        <br>
+        <img src="../assets/foresee/create_alt.png" alt="Foresee Paper" class="w-full h-auto bg-gray-300">
+        <br>
+        <img src="../assets/foresee/analysis_alt.png" alt="Foresee Paper" class="w-full h-auto bg-gray-300">
+        <br>
+        <img src="../assets/foresee/library.png" alt="Foresee Paper" class="w-full h-auto bg-gray-300">
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+</html> 
